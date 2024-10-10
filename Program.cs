@@ -24,16 +24,29 @@
 
         // FindSum(5);
         // FindSum(1);
-        // FindSum(3);
+        // FindSum(-3);
         // FindSum(100);
 
-        FindSumOfEvenNumbers(10);
-        FindSumOfEvenNumbers(-5);
-        FindSumOfEvenNumbers(2);
-        FindSumOfEvenNumbers(0);
-        FindSumOfEvenNumbers(1);
-        FindSumOfEvenNumbers(25);
-        FindSumOfEvenNumbers(-25);
+        // FindSumOfEvenNumbers(10);
+        // FindSumOfEvenNumbers(-5);
+        // FindSumOfEvenNumbers(2);
+        // FindSumOfEvenNumbers(0);
+        // FindSumOfEvenNumbers(1);
+        // FindSumOfEvenNumbers(25);
+        // FindSumOfEvenNumbers(-25);
+
+        // FindSumOfOddNumbers(10);
+        // FindSumOfOddNumbers(-5);
+        // FindSumOfOddNumbers(1);
+        // FindSumOfOddNumbers(2);
+        // FindSumOfOddNumbers(25);
+        // FindSumOfOddNumbers(-25);
+
+        OutputRightTriangle(4);
+        OutputRightTriangle(6);
+        OutputRightTriangle(-4);
+        OutputRightTriangle(-6);
+        OutputRightTriangle(0);
     }
 
     public static void Write1ThroughN_While(int n)
@@ -121,29 +134,27 @@
 
     public static void FindSum(int n)
     {
-        int result = n;
+        int result = 0;
 
         if (n > 0)
         {
-            for (int i = n; i > 0; i--)
+            for (int i = 0; i <= n; i++)
             {
-                n--;
-                result = result + n;
+                result = result + i;
             }
             Console.WriteLine(result);
         }
 
         else if (n == 0)
         {
-            Console.WriteLine("0");
+            Console.WriteLine(0);
         }
 
         else
         {
-            for (int i = n; i < 0; i++)
+            for (int i = n; i <= 1; i++)
             {
-                result = result + (n + 1);
-                n++;
+                result = result + i;
             }
             Console.WriteLine(result);
         }
@@ -151,6 +162,96 @@
 
     public static void FindSumOfEvenNumbers(int n)
     {
-        
+        int result = 0;
+
+        if (n > 0)
+        {
+            for (int i = 0; i <= n; i++)
+            {
+                if (i % 2 == 0)
+                {
+                    result += i;
+                }
+            }
+            Console.WriteLine(result);
+        }
+
+        else if (n == 0)
+        {
+            Console.WriteLine(0);
+        }
+
+        else
+        {
+            for (int i = n; i <= 1; i++)
+            {
+                if (i % 2 == 0)
+                {
+                    result += i;
+                }
+            }
+            Console.WriteLine(result);
+        }
+    }
+
+    public static void FindSumOfOddNumbers(int n)
+    {
+        int result = 0;
+
+        if (n > 0)
+        {
+            for (int i = 0; i <= n; i++)
+            {
+                if (i % 2 == 1)
+                {
+                    result += i;
+                }
+            }
+            Console.WriteLine(result);
+        }
+
+        else if (n == 0)
+        {
+            Console.WriteLine(0);
+        }
+
+        else
+        {
+            for (int i = n; i <= 1; i++)
+            {
+                if (i % 2 == -1 || i % 2 == 1)
+                {
+                    result += i;
+                }
+            }
+            Console.WriteLine(result);
+        }
+    }
+
+    public static void OutputRightTriangle(int n)
+    {
+        if (n > 0)
+        {
+            for (int i = 0; i <= n; i++)
+            {
+                for (int i2 = 0; i2 < i; i2++)
+                {
+                    Console.Write("*");
+                }
+                Console.WriteLine("");
+            }
+        }
+
+        else
+        {
+            for (int i = 0; i <= n; i++)
+            {
+                for (int i2 = i; i2 < n; i2++)
+                {
+                    Console.Write("*");
+                }
+                Console.WriteLine("");
+            }
+        }
     }
 }
