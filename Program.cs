@@ -76,9 +76,10 @@
         {
             while (i <= n)
             {
-                Console.WriteLine(i);
+                Console.Write($"{i} ");
                 i++;
             }
+            Console.WriteLine("");
         }
         else
         {
@@ -92,8 +93,9 @@
         {
             for (int i = 1; i <= n; i++)
             {
-                Console.WriteLine(i);
+                Console.Write($"{i} ");
             }
+        Console.WriteLine("");
         }
         else
         {
@@ -107,9 +109,10 @@
         {
             while (0 < n)
             {
-                Console.WriteLine(n);
+                Console.Write($"{n} ");
                 n--;
             }
+            Console.WriteLine("");
         }
         else
         {
@@ -123,8 +126,9 @@
         {
             for (int i = n; i > 0; i--)
             {
-                Console.WriteLine(i);
+                Console.Write($"{i} ");
             }
+            Console.WriteLine("");
         }
 
         else
@@ -138,9 +142,9 @@
         int i = 0;
         while (i < 101)
         {
-            if (i % 2 == 0)
+            if (i % 2 == 0 && i != 0)
             {
-                Console.WriteLine(i);
+                Console.Write($"{i} ");
                 i++;
             }
 
@@ -149,6 +153,7 @@
                 i++;
             }
         }
+        Console.WriteLine("");
     }
 
     public static void FindSum(int n)
